@@ -57,13 +57,13 @@ Para testar o funcionamento da rede e dos serviços que serão concretizados é 
 
 A rede está configurada para o Kathará, mas não estão configurados os mecanismos de segurança. O projeto consiste em implementar 4 tipos de mecanismos de segurança: VPN, SSH, firewall (packet filter) e detetor de intrusões.
 
-## VPN - OPENVPN
+## VPN - OpenVPN
 
 SValley está ligado a Oeiras de através de uma VPN. Configure essa VPN usando o software OpenVPN [2][14]. O router de acesso à Internet de SValley será um cliente OpenVPN e o router de acesso de Oeiras será um servidor OpenVPN. Todo o tráfego de SValley para Oeiras e vice-versa tem de ser encaminhado através de um túnel entre esses dois routers. Portanto, se alguém na Internet tentar escutar essa comunicação vai observar tráfego cifrado, logo ilegível. 
 A comunicação tem de ser cifrada usando AES com chaves de 256 bits e modo CBC. As chaves do cliente OpenVPN devem ser geradas no cliente e não no servidor OpenVPN.
 Teste se a comunicação está a ser efetivamente cifrada, escutando a comunicação na Internet.
 
-## SSH - OPENSSH
+## SSH - OpenSSH
 
 A empresa tem um administrador de rede que tem de poder trabalhar remotamente no servidor web. O administrador tem uma conta nesse servidor que usa para fazer o acesso usando o protocolo SSH. O administrador viaja muito e por isso, apesar de sob o ponto de vista de segurança não ser muito boa ideia, abriu o acesso por SSH a esse servidor a partir de qualquer ponto do mundo. Por exemplo, pode fazer esse acesso a partir de um PC ligado à Internet, como o somepc no caso da nossa rede emulada. 
 Configure o protocolo SSH fornecido pelo pacote OpenSSH [4][13] de modo a permitir esse acesso. A autenticação tem de ser baseada em criptografia de chave pública, não em password. 
@@ -72,7 +72,7 @@ Teste o funcionamento desses protocolos usando os comandos:
 *	scp para copiar ficheiros entre os dois computadores.
 Teste se a comunicação está a ser efetivamente cifrada, escutando a comunicação na Internet.
 
-## Firewall - IPTABLES
+## Firewall - iptables
 
 A rede da CRYPTOTEKK tem três firewalls ou packet filters mas vamos configurar apenas duas delas:
 *	packetfilter que filtra pacotes entre a Internet e Oeiras;
@@ -95,7 +95,7 @@ Configure essas duas firewalls usando o netfilter / iptables [1][12] de modo a c
 *	Nenhum pacote pode entrar em Oeiras ou SValley com um endereço IP de origem da gama de endereços dessas subredes (ou seja, é preciso bloquear IP Spoofing [11]).
 Teste se cada firewall está a bloquear todo o tráfego que deve bloquear. Para testar se uma firewall está a negar o acesso a uma porta podem testar essa mesma porta usando o netcat.
 
-## DETECÇÃO DE INTRUSÕES - SNORT
+## Detecção de Intrusões - SNORT
 
 O detetor de intrusões snort [3] deve ser configurado de modo a detetar ataques e intrusões na rede. O sistema de deteção de intrusões (IDS) deve ser colocado na máquina designada ids1. O switch ao qual esse computador está ligado está configurado para funcionar como hub, de modo que o IDS receba todo o tráfego que passa por esse switch.
 O primeiro aspeto é a instalação do software snort em si, pois este não está disponível na imagem quagga usada em todas as imagens do ficheiro lab.conf. Para o efeito é preciso criar uma nova imagem com o snort seguindo as instruções fornecidas no slide “Installing software inside a VM” [15].
