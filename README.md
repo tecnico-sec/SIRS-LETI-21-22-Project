@@ -95,7 +95,7 @@ Configure essas duas firewalls usando o netfilter / iptables [1][12] de modo a c
 *	Nenhum pacote pode entrar em Oeiras ou SValley com um endereço IP de origem da gama de endereços dessas subredes (ou seja, é preciso bloquear IP Spoofing [11]).
 Teste se cada firewall está a bloquear todo o tráfego que deve bloquear. Para testar se uma firewall está a negar o acesso a uma porta podem testar essa mesma porta usando o netcat.
 
-## Detecção de Intrusões - SNORT
+## Detecção de Intrusões - snort
 
 O detetor de intrusões snort [3] deve ser configurado de modo a detetar ataques e intrusões na rede. O sistema de deteção de intrusões (IDS) deve ser colocado na máquina designada ids1. O switch ao qual esse computador está ligado está configurado para funcionar como hub, de modo que o IDS receba todo o tráfego que passa por esse switch.
 O primeiro aspeto é a instalação do software snort em si, pois este não está disponível na imagem quagga usada em todas as imagens do ficheiro lab.conf. Para o efeito é preciso criar uma nova imagem com o snort seguindo as instruções fornecidas no slide “Installing software inside a VM” [15].
