@@ -77,7 +77,7 @@ Teste se a comunicação está a ser efetivamente cifrada, escutando a comunica�
 A rede da CRYPTOTEKK tem três firewalls ou packet filters mas vamos configurar apenas duas delas:
 *	packetfilter que filtra pacotes entre a Internet e Oeiras;
 *	router3 que filtra pacotes entre a Internet e SValley.
-Configure essas duas firewalls usando o netfilter / iptables [1][12] de modo a concretizar a seguinte política de segurança:
+Configure essas duas firewalls usando o netfilter / iptables [1][12][15] de modo a concretizar a seguinte política de segurança:
 *	Todos os pacotes não explicitamente permitidos pelo resto da política são proibidos.
 *	É permitido fazer ping e traceroute entre todas as máquinas (só para efeitos de depuração de erros; em termos de segurança não é boa ideia permitir da Internet executar esses comandos para dentro da rede da empresa).
 *	Qualquer máquina da Internet e da rede da CRYPTOTEKK pode:
@@ -97,7 +97,7 @@ Teste se cada firewall está a bloquear todo o tráfego que deve bloquear. Para 
 
 ## Detecção de Intrusões - snort
 
-O detetor de intrusões snort [3] deve ser configurado de modo a detetar ataques e intrusões na rede. O sistema de deteção de intrusões (IDS) deve ser colocado na máquina designada ids1. O switch ao qual esse computador está ligado está configurado para funcionar como hub, de modo que o IDS receba todo o tráfego que passa por esse switch.
+O detetor de intrusões snort [3][17] deve ser configurado de modo a detetar ataques e intrusões na rede. O sistema de deteção de intrusões (IDS) deve ser colocado na máquina designada ids1. O switch ao qual esse computador está ligado está configurado para funcionar como hub, de modo que o IDS receba todo o tráfego que passa por esse switch.
 O primeiro aspeto é a instalação do software snort em si, pois este não está disponível na imagem quagga usada em todas as imagens do ficheiro lab.conf. Para o efeito é preciso criar uma nova imagem com o snort seguindo as instruções fornecidas no slide “Installing software inside a VM” [15].
 Depois o snort tem de ser configurado para alertar para um conjunto de ataques. O snort contém um conjunto enorme de regras que é atualizado periodicamente. Estas regras e a configuração do snort estão geralmente disponíveis na pasta /etc/snort. Modifique as regras disponíveis de modo a gerar os seguintes alarmes (ou seja, as seguintes mensagens na consola ou ficheiro de log):
 
@@ -132,6 +132,8 @@ O projeto é entregue no Fénix. Prazos e forma de entrega (sendo XXX o nº do g
 * [13] Guia de Laboratório - Secure Shell: https://github.com/tecnico-sec/Kathara-SSH 
 * [14] Guia de Laboratório - Virtual Private Network: https://github.com/tecnico-sec/Kathara-VPN 
 * [15] Miguel Correia. “Kathará”. Slides de Segurança Informática em Redes e Sistemas, LETI, Instituto Superior Técnico, Abril de 2022
+* [16] Miguel Correia. "iptables: a brief introduction". Slides de Segurança Informática em Redes e Sistemas, LETI, Instituto Superior Técnico, Maio de 2022
+* [17] Miguel Correia. "snort: a brief introduction". Slides de Segurança Informática em Redes e Sistemas, LETI, Instituto Superior Técnico, Maio de 2022
 
 
 
