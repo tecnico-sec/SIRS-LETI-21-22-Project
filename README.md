@@ -97,9 +97,11 @@ Teste se cada firewall está a bloquear todo o tráfego que deve bloquear. Para 
 
 ## Detecção de Intrusões - snort
 
-O detetor de intrusões snort [3][17] deve ser configurado de modo a detetar ataques e intrusões na rede. O sistema de deteção de intrusões (IDS) deve ser colocado na máquina designada ids1. O switch ao qual esse computador está ligado está configurado para funcionar como hub, de modo que o IDS receba todo o tráfego que passa por esse switch.
-O primeiro aspeto é a instalação do software snort em si, pois este não está disponível na imagem quagga usada em todas as imagens do ficheiro lab.conf. Para o efeito é preciso criar uma nova imagem com o snort seguindo as instruções fornecidas no slide “Installing software inside a VM” [15].
-Depois o snort tem de ser configurado para alertar para um conjunto de ataques. O snort contém um conjunto enorme de regras que é atualizado periodicamente. Estas regras e a configuração do snort estão geralmente disponíveis na pasta /etc/snort. No nosso caso interessam apenas dois ficheiros: o /etc/snort/snort.conf (onde está a configuração do snort) e o /etc/snort/rules/local.rules (onde devem colocar as vossas regras). Nota: no ficheiro /etc/snort/snort.conf é preciso dar à opção *config checksum_mode" o valor *none*.
+O detetor de intrusões snort [3][17] deve ser configurado de modo a detetar ataques e intrusões na rede. O sistema de deteção de intrusões (IDS) deve ser colocado na máquina designada *ids1*. O switch ao qual esse computador está ligado está configurado para funcionar como hub, de modo que o IDS receba todo o tráfego que passa por esse switch.
+
+O primeiro passo é a instalação do software snort em si, pois este não está disponível na imagem quagga usada em todas as imagens do ficheiro lab.conf. Para o efeito é preciso criar uma nova imagem com o snort seguindo as instruções fornecidas no slide “Installing software inside a VM” [15].
+
+No segundo passo, o snort tem de ser configurado para alertar para um conjunto de ataques. O snort contém um conjunto enorme de regras que é atualizado periodicamente. Estas regras e a configuração do snort estão geralmente disponíveis na pasta /etc/snort. No nosso caso interessam apenas dois ficheiros: o /etc/snort/snort.conf (onde está a configuração do snort) e o /etc/snort/rules/local.rules (onde devem colocar as vossas regras). Nota: no ficheiro /etc/snort/snort.conf é preciso dar à opção *config checksum_mode" o valor *none*.
 
 Modifique as regras disponíveis de modo a gerar os seguintes alarmes (ou seja, as seguintes mensagens na consola ou ficheiro de log):
 
