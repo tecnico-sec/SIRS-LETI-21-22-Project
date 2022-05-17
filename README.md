@@ -31,9 +31,8 @@ O escritório de Oeiras (1) tem 3 subredes, interligadas por dois routers:
     *	um detetor de intrusões;
 *	a subrede corporate, onde se encontra:
     *	um switch, 
-    *	um servidor de ficheiros, 
-    *	as estações de trabalho dos colaboradores da empresa e 
-    *	um detetor de intrusões;
+    *	um servidor de ficheiros e 
+    *	as estações de trabalho dos colaboradores da empresa.
 
 Em relação ao software instalado nas estações de trabalho e nos servidores:
 *	estações de trabalho: não contêm software específico, só o que já vem na imagem;
