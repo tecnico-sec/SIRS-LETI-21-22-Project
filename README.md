@@ -18,7 +18,7 @@ A entrega do projeto tem 3 componentes:
 
 A rede da CRYPTOTEKK contém os dispositivos habituais neste tipo de redes: servidores, estações de trabalho (PCs), routers, switches (também designados bridges) e dispositivos de segurança. A configuração básica da rede já está feita e é fornecida sob a forma de um laboratório Kathará, mas ainda não inclui mecanismos de segurança. 
 A rede tem três partes:
-1.	Escritório de Oeiras (Oeiras): contém 12 dispositivos e usa endereços da gama 1.2.0.0/20;
+1.	Escritório de Oeiras (Oeiras): contém 11 dispositivos e usa endereços da gama 1.2.0.0/20;
 2.	Escritório de Silicon Valley (SValley): contém 4 dispositivos e usa endereços da gama 5.4.3.0/24;
 3.	Internet: representada de forma extremamente simplificada por um único switch e um PC para efeito de testes.
 
