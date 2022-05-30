@@ -86,7 +86,7 @@ Configure essas duas firewalls usando o netfilter / iptables [1][12][15] de modo
     *	podem responder aos pedidos que recebem (web e correio eletrónico);
     *	o servidor de correio eletrónico pode entregar mensagens a outros servidores de correio eletrónico da Internet (TCP/465, SMTPS).
 *	Máquinas da rede da CRYPTOTEKK (i.e., da subrede corporate de Oeiras e da subrede de SValley):
-    *	podem aceder aos servidores web (SSH e TCP/80) de correio eletrónico 
+    *	podem aceder aos servidores web (SSH e TCP/80) e correio eletrónico 
         *	da Internet (i.e. externos à empresa) e 
         *	da própria empresa;
     *	podem aceder ao servidor de ficheiros.
