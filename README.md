@@ -115,7 +115,7 @@ Teste a deteção dos ataques acima começando por criar comandos ou scripts que
 
 O projeto é entregue no Fénix. Prazos e forma de entrega (sendo XXX o nº do grupo):
 *	Até dia 27 de Maio às 17 horas: entregar um diagrama da rede sob a forma de um ficheiro chamado diagramaXXX.pdf no Fénix;
-*	Até dia 20 de Junho às 17 horas: entregar todos os ficheiros do laboratório sob a forma de um ficheiro katharaXXX.tgz no Fénix (incluir o laboratório Kathará e uma pasta com ficheiros snort se não estiverem incluídos na anterior);
+*	Até dia 20 de Junho às 17 horas: entregar todos os ficheiros do laboratório sob a forma de um ficheiro katharaXXX.tgz no Fénix. Incluir o laboratório Kathará com todos os ficheiros .startup e as subpastas. Se alguns comandos não puderem ser automatizados dessa forma, explicar e indicá-los no laboratório. Não é preciso entregar a imagem que contém o snort;
 *	Até dia 20 de Junho às 17 horas: entregar o relatório/questionário preenchido sob a forma de um ficheiro chamado relatorioXXX.pdf no Fénix. Esse relatório tem obrigatoriamente criado com base no ficheiro relatorio-questionario.docx fornecido.
 
 # Bibliografia
